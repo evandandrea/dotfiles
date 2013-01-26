@@ -43,3 +43,9 @@ set iskeyword-=_
 set viminfo='1000,f1,<500
 
 set modeline
+
+" Solarized
+let g:solarized_termcolors=256
+syntax enable
+set background=dark
+colorscheme solarized
