@@ -26,13 +26,12 @@ export PATH=/home/evan/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
 # Added by me.
 setopt extendedglob
 
+export TERM=xterm-color
+export EDITOR=vim
+
 export DEBEMAIL="ev@ubuntu.com"
 export DEBFULLNAME="Evan Dandrea"
 export DH_ALWAYS_EXCLUDE='CVS:.svn:{arch}:.arch-ids:.bzr:.git'
-
-# Workaround
-bindkey "5C" forward-word
-bindkey "5D" backward-word
 
 # The following lines were added by compinstall
 zstyle ':completion:*' completer _expand _complete _ignored _correct

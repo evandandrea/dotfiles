@@ -1,0 +1,7 @@
+[user]
+	name = Evan Dandrea
+	email = evan@dandrea.co.uk
+[color]
+	ui = auto
+[credential]
+	helper = cache
