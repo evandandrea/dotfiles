@@ -1,11 +1,7 @@
 " Install pathogen.
 execute pathogen#infect()
 
-autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
-autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
-au BufRead,BufNewFile *.vala            setfiletype vala
-au BufRead,BufNewFile *.vapi            setfiletype vala
-let vala_space_errors = 1
+" Sane C and Python spacing.
 augroup c
 	autocmd!
 	autocmd FileType c setlocal modeline
@@ -21,31 +17,16 @@ augroup python
 	autocmd FileType python set sts=4 tabstop=4 sw=4 et ai
 	autocmd FileType python set omnifunc=pythoncomplete#Complete
 augroup end
-set background=dark
-syntax enable
 
-au! BufRead,BufNewFile *.moin set filetype=moin
-filetype on
-filetype plugin on
-filetype plugin indent on
-"nnoremap <space> za
-"vnoremap <space> zf
-"set foldmethod=indent
-
-" Sane tab-complete.
-set wildmode=longest,list,full
-set wildmenu
-
-" Include underscores when tabbing.
-set iskeyword-=_
-
-" Save marks between sessions.
-set viminfo='1000,f1,<500
-
-set modeline
-
-" Solarized
-let g:solarized_termcolors=256
+" Solarized.
+set term=screen-256color
+let g:solarized_termcolors=16
+set t_Co=16
 syntax enable
 set background=dark
 colorscheme solarized
+call togglebg#map("<F5>")
+
+" General rubbish.
+
+set number

@@ -56,3 +56,6 @@ function _vsc_info() {
 
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 _vsc_info
+
+# Proper colors.
+alias tmux='TERM=screen-256color-bce tmux -2'
